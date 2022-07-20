@@ -1,0 +1,23 @@
+{
+  "volar-tools.enable": true,
+  "tsserver.enable": true,
+  "emmet.includeLanguages": {"vue-html":"html"},
+  "html.filetypes": [
+    "html",
+    "handlebars",
+    "htmldjango",
+    "blade",
+    "ejs"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "js",
+    "markdown",
+    "javascript",
+    "typescript",
+    "vue",
+    "php"
+  ],
+  "coc.preferences.jumpCommand": "tabe"
+}
+
