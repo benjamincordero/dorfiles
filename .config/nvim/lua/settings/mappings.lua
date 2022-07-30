@@ -1,38 +1,38 @@
 local g = vim.g
-local opts = { noremap = true, silent = true }
+local opts = {noremap = true, silent = true}
 local map = vim.api.nvim_set_keymap
- 
---basic maps
+
+-- basic maps
 vim.keymap.set('n', '<F5>', ':luafile ~/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<Leader>q', ':q<CR>')
 vim.keymap.set('n', '<Leader>qq', ':q!<CR>')
 vim.keymap.set('n', '<Leader>w', ':w<CR>')
-vim.keymap.set({ 'n', 'v' }, '<M-z>', ':set wrap!<CR>', { silent = true })
+vim.keymap.set({'n', 'v'}, '<M-z>', ':set wrap!<CR>', {silent = true})
 vim.keymap.set('v', '<Tab>', '>gv<CR>')
 vim.keymap.set('v', '<S-Tab>', '<gv<CR>')
-vim.keymap.set('n', '<Leader>h', ':nohl<CR>', {silent= true})
-vim.keymap.set('n', '<ESC>', ':nohl<CR>', {silent= true})
+vim.keymap.set('n', '<Leader>h', ':nohl<CR>', {silent = true})
+vim.keymap.set('n', '<ESC>', ':nohl<CR>', {silent = true})
 vim.keymap.set('n', '<Leader>j', ':vsplit<CR>')
 
---Terminal
-vim.keymap.set({ 'n', 'v' }, '<C-t>', ':split<CR>:ter<CR>:resize 15<CR>')
+-- Terminal
+vim.keymap.set({'n', 'v'}, '<C-t>', ':split<CR>:ter<CR>:resize 15<CR>')
 vim.keymap.set('n', '<Leader>>', '10<C-w>>')
 vim.keymap.set('n', '<Leader><', '10<C-w><')
 
 -- Files and nvim-tree config
---vim.keymap.set('n', '<S-b>', ':Buffers<CR>')
---vim.keymap.set('n', '<C-s>', ':Rg<CR>')
---vim.keymap.set('n', '<C-f>', ':Files<CR>')
---vim.keymap.set('n', 'tp', ':tabprev<CR>')
---vim.keymap.set('n', 'tn', ':tabnext<CR>')
---vim.keymap.set('n', 'tf', ':tabfirst<CR>')
---vim.keymap.set('n', 'tl', ':tablast<CR>')
+-- vim.keymap.set('n', '<S-b>', ':Buffers<CR>')
+-- vim.keymap.set('n', '<C-s>', ':Rg<CR>')
+-- vim.keymap.set('n', '<C-f>', ':Files<CR>')
+-- vim.keymap.set('n', 'tp', ':tabprev<CR>')
+-- vim.keymap.set('n', 'tn', ':tabnext<CR>')
+-- vim.keymap.set('n', 'tf', ':tabfirst<CR>')
+-- vim.keymap.set('n', 'tl', ':tablast<CR>')
 vim.keymap.set('n', '<Leader>b', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '--', '<plug>NERDCommenterToggle', opts)
 
 vim.keymap.set('n', ')', '<Plug>(GitGutterNextHunk)', opts)
 vim.keymap.set('n', '(', '<Plug>(GitGutterPrevHunk)', opts)
- 
+
 vim.cmd [[
   inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 ]]
@@ -44,8 +44,8 @@ map('n', '<S-TAB>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', 'tn', '<Cmd>BufferNext<CR>', opts)
 map('n', '<TAB>', '<Cmd>BufferPrevious<CR>', opts)
 -- Re-order to previous/next
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+map('n', '<A-S-,>', '<Cmd>BufferMovePrevious<CR>', {noremap = true})
+map('n', '<A-S-.>', '<Cmd>BufferMoveNext<CR>', {noremap = true})
 -- Goto buffer in position...
 map('n', 'tf', '<Cmd>BufferGoto 1<CR>', opts)
 map('n', 't2', '<Cmd>BufferGoto 2<CR>', opts)
