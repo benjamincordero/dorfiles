@@ -34,4 +34,4 @@
 - [Visual-Multi](https://github.com/mg979/vim-visual-multi, "Visual-Multi") Edit multiple lines in same time like vscode, sublime, etc.
 - [Markdown](https://github.com/iamcco/markdown-preview.nvim "Markdown") Preview markdown on your modern browser with synchronised scrolling and flexible configuration
 
-- And other interesting plugins, plus I'm always adding new ones. Take a look at the **packer-config** folder.
+- And other interesting plugins, I'm always adding new ones. Take a look at the **lua/packer** folder.
